@@ -1,0 +1,400 @@
+@use "sass:map";
+
+
+$article: (header:(mobile:18px,
+        tablet:24px,
+        desktop:24px,
+    ),
+    article:(mobile:14px,
+        tablet:16px,
+        desktop:16px, ),
+    date:(mobile:10px,
+        tablet:16px,
+        desktop:16px, ));
+
+$articlevw: (header:(mobile:4.8vw,
+        tablet:3.13vw,
+        desktop:1.67vw,
+    ),
+    article:(mobile:3.73vw,
+        tablet:2.08vw,
+        desktop:1.11vw, ),
+    date:(mobile:2.67vw,
+        tablet:2.08vw,
+        desktop:1.11vw, ));
+
+
+
+@function ng($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+
+    @return $map;
+}
+
+
+// @error "minimum width:#{ng($article, "date", "mobile"), ng($articlevw, "date", "mobile"), ng($article, "date", "tablet")}";
+
+
+.mainWrapper {
+    display: grid;
+    grid-template-columns: 1fr repeat(4, 20.8vw) 1fr;
+    width: 100%;
+    justify-content: center;
+    padding-top: 40px;
+    /* grid-template-rows:  86px 43px max-content 30px 40px max-content 40px auto; */
+    /* grid-template-rows: 160px 1fr auto ; */
+    grid-template-rows: repeat(auto-fill, [row-start] minmax(100px, 1fr) [row-end]);
+    height: auto;
+    gap: 40px 10px;
+    padding-bottom: 60px;
+    background-color: #FFFFFF;
+
+}
+
+.titleWrapper {
+
+    grid-row: 1;
+    grid-column: 1/-1;
+
+    width: 100%;
+    padding-top: 89px;
+    height: 192px;
+    background: #2E3237;
+    /* display: grid; */
+    /* grid-template-columns: 1fr repeat(4, 20.8vw) 1fr; */
+    /* gap: 0px 10px; */
+    /* display: flow-root; */
+
+}
+
+.title {
+    /* grid-column: 2/-2; */
+    font-style: normal;
+    font-weight: bold;
+    white-space: nowrap;
+    font-family: Bebas Neue;
+
+    color: #FFFFFF;
+
+    font-size: clamp(18px, 8vw, 40px);
+    padding-top: 43px;
+    padding-left: 16px;
+}
+
+
+.description {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+
+
+    grid-row: 1;
+    grid-column: 2/-2;
+    font-size: max(16px, 4.27vw);
+    /* height: auto; */
+    line-height: max(20px, 5.33vw);
+}
+
+.wrapperClass {
+    padding-top: 20px;
+    grid-column: 2/5;
+    overflow: hidden;
+}
+
+.headerClass {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: clamp(#{ng($article, "header", "mobile"), ng($articlevw, "header", "mobile"), ng($article, "header", "tablet") });
+    line-height: max(27px, 7.2vw);
+    color: #2E3237;
+
+    &:hover {
+        color: #C08718;
+    }
+}
+
+.articleClass {
+    color: #2E3237;
+
+    font-size: clamp(#{ng($article, "article", "mobile"), ng($articlevw, "article", "mobile"), ng($article, "article", "tablet")});
+    line-height: max(18px, 4.8vw);
+
+
+}
+
+.dateClass {
+    color: rgba(46, 50, 55, 0.6);
+    font-size: clamp(#{ng($article, "date", "mobile"), ng($articlevw, "date", "mobile"), ng($article, "date", "tablet")});
+
+    line-height: max(10px, 2.67vw);
+
+}
+
+.imgClass {
+    height: 32vw;
+    width: 68vw;
+}
+
+
+.imgClass {
+
+    overflow: hidden;
+
+    img {
+
+        object-fit: cover;
+        transition: transform .3s ease-out;
+    }
+}
+
+.wrapperClass:hover img,
+.imgClass:hover img {
+    transform: scale3d(1.05, 1.05, 1);
+}
+
+.txtClass {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px 0px;
+}
+
+@media (min-width:460px) {
+    .mainWrapper {
+        padding-top: 30px;
+        width: auto;
+        grid-template-rows: repeat(auto-fill, [row-start] minmax(100px, 1fr) [row-end]);
+        grid-template-columns: repeat(6, 11.59vw);
+
+
+        gap: 60px 5.21vw;
+        padding-bottom: 9.77vh;
+    }
+
+    .titleWrapper {
+        height: 190px;
+        padding-top: 105px;
+    }
+
+    .title {
+        // padding: 0;
+        padding-top: 32px;
+        // grid-column: 2;
+        font-size: clamp(40px, 5.21vw, 60px);
+        line-height: normal;
+    }
+
+    .txtClass {
+        gap: 10px 0px;
+
+        padding-top: 20px;
+    }
+
+    .description {
+        grid-column: 1/-1;
+        font-size: max(22px, 2.86vw);
+        line-height: max(27px, 3.52vw);
+        padding-bottom: 20px;
+
+    }
+
+    .wrapperClass {
+        padding-top: 0;
+
+        /* display: none; */
+        grid-column: span 3;
+        overflow: hidden;
+    }
+
+    .headerClass,
+    .articleClass,
+    .dateClass {
+
+        line-height: normal;
+    }
+
+    .headerClass {
+        font-size: clamp(#{ng($article, "header", "tablet"), ng($articlevw, "header", "tablet"), ng($article, "header", "desktop") });
+    }
+
+    .articleClass {
+        font-size: clamp(#{ng($article, "article", "tablet"), ng($articlevw, "article", "tablet"), ng($article, "article", "desktop") });
+    }
+
+    .dateClass {
+        font-size: clamp(#{ng($article, "date", "tablet"), ng($articlevw, "date", "tablet"), ng($article, "date", "desktop")});
+    }
+
+    .imgClass {
+        overflow: hidden;
+        display: block;
+
+        height: 26.04vw;
+        width: 45.31vw;
+    }
+}
+
+@media (min-width: 900px) {
+
+    .title {
+        padding-left: 61px;
+        font-size: max(6.25vw, 90px);
+        padding-top: 70px;
+        height: 100%;
+
+    }
+
+    .titleWrapper {
+        // padding-top: 105px;
+        // height: 190px;
+        // grid-template-columns: repeat(6, 11.59vw);
+        // gap: 60px 5.21vw;
+        display: inline-table;
+        min-height: 295px;
+
+    }
+
+    .mainWrapper {
+        padding-top: 7.22vh;
+        grid-template-columns: repeat(8, 9.03vw);
+        gap: 11.11vh 2.78vw;
+        grid-template-rows: minmax(11.11vh, 400px) repeat(auto-fill, [row-start] minmax(11.11vh, auto) [row-end]);
+        padding-bottom: 18.89vh;
+    }
+
+    .description {
+        grid-column: 5/-1;
+        font-size: max(24px, 1.67vw);
+        line-height: normal;
+        height: fit-content;
+    }
+
+    .wrapperClass:nth-child(2) {
+        grid-column: span 4;
+        position: relative;
+        object-fit: cover;
+        height: 100%;
+        max-height: 400px;
+        // width: 100px;
+
+        .txtClass {
+            padding: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-rows: 5.67vh min-content 2.22vh min-content 1fr min-content 4.56vh;
+            grid-template-columns: 1fr 1fr;
+
+            // z-index: 20;
+            gap: 0;
+
+
+            * {
+                color: rgba(255, 255, 255, 0.9);
+                font-size: max(24px, 1.67vw);
+
+                // z-index: 21;
+            }
+        }
+
+        .readClass {
+            margin-left: auto;
+            padding-right: 2.78vw;
+            grid-row: -3;
+
+            &:hover {
+                color: #C08718;
+            }
+        }
+
+        .headerClass {
+            padding: 0 2.78vw;
+            line-height: 3.33vh;
+            grid-row: 2;
+            grid-column: 1/-1;
+            text-decoration: none;
+        }
+
+        .articleClass {
+            padding: 0 2.78vw;
+
+            font-size: max(16px, 1.11vw);
+            line-height: 2.67vh;
+            grid-row: 4;
+            grid-column: 1/-1;
+
+        }
+
+        .dateClass {
+
+
+
+            padding-left: 2.78vw;
+
+            grid-row: -3;
+            // grid-column: 1/-1;
+
+        }
+
+        .imgClass {
+            width: 100%;
+            height: 100%;
+            // position: relative;
+
+
+
+            &:after {
+                content: '';
+                display: block;
+                background: rgba(46, 50, 55, 0.7);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                // z-index: 100;
+            }
+        }
+
+        margin-bottom: 50px;
+
+        &:hover img {
+
+            transform: scale3d(1.05, 1.05, 1);
+
+
+        }
+    }
+
+    .wrapperClass {
+        grid-column: span 2;
+    }
+
+
+    .headerClass {
+        font-size: max(24px, 1.67vw);
+    }
+
+    .articleClass {
+        font-size: max(16px, 1.11vw);
+    }
+
+    .dateClass {
+        font-size: max(16px, 1.11vw);
+    }
+
+    .imgClass {
+
+        height: 13.89vw;
+        width: 20.83vw;
+        // object-fit: contain;
+    }
+
+}

@@ -1,0 +1,235 @@
+.author_wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    white-space: pre-line;
+
+}
+
+
+.text_wrapper{
+    position: absolute;
+    top:205px;
+    left: 15.902%;
+    z-index: 20;
+    width: 56.25%;
+
+}
+
+.author_header{
+    width: 100%;
+    font-family: Bebas Neue;
+    font-style: normal;
+    font-weight: bold;
+    /*font-size: 60px;
+    line-height: 60px;*/
+    font-size: 4.166vmax;
+    line-height: 4.166vmax;
+    /* or 100% */
+    color: #FFFFFF;
+
+}
+.author_content{
+    /* width: 640px; */
+        /* width: 44.86vmax; */
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+font-size: 18px;
+line-height: 26px;
+    /* or 144% */
+
+
+    color: #FFFFFF;
+
+    margin-top: 20px;
+
+}
+
+.author_img_wrapper{
+    position: absolute;
+    width: 48.61111%;
+    height: 100%;
+    right: 0px;
+    top: 0px;
+
+}
+.author_img_wrapper img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.link_button_wrapper{
+    margin-top: 40px;
+}
+
+
+@media (max-width: 768px) {
+
+    .text_wrapper{
+        position: absolute;
+        width: 84.1145%;
+        left: 16px;
+        top: 488px;
+        z-index: 20;
+    }
+
+    .author_header{
+        width: 95%;
+        font-family: Bebas Neue;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 40px;
+        /* or 100% */
+        color: #FFFFFF;
+
+    }
+    .author_content{
+        /* width: 44.86vmax; */
+        margin-top: 40px;
+
+    }
+
+    .author_img_wrapper{
+        position: absolute;
+        width: 100%;
+        height: 283px;
+        left: 0px;
+        top: 135px;
+        right: 0px;
+
+    }
+    .author_img_wrapper img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .link_button_wrapper{
+        margin-top: 30px;
+    }
+}
+@media (max-height: 900px) {
+    .author_header{
+        font-size: 6.67vmin;
+        line-height: 6.67vmin;
+    }
+    .author_content{
+        font-size: 2vmin;
+        line-height: 2.89vmin;
+    }
+}
+@media (max-width: 500px) and (orientation:portrait) {
+
+    .text_wrapper{
+        position: absolute;
+        width: 85.33vw;
+        left: 4.27vw;
+        top: min(205px,calc(205px * var(--inhm)));
+        z-index: 20;
+    }
+
+    .author_header{
+        width: 100%;
+        font-family: Bebas Neue;
+        font-style: normal;
+        font-weight: bold;
+
+        font-size: min(30px,calc(30px * var(--inh)));
+        line-height: min(36px,calc(36px * var(--inh)));
+        /* or 100% */
+        color: #FFFFFF;
+        white-space: initial;
+    }
+    .author_content{
+        width: 100%;
+        margin-top: 10px;
+
+        /*font-size: max(10px,1.97vh);*/
+        font-size: min(16px,calc(16px * var(--inhm)));
+        line-height: min(20px,calc(20px * var(--inhm)));
+
+
+    }
+
+
+    .author_img_wrapper{
+        position: absolute;
+        width: 100%;
+        height: 185px;
+        left: 0px;
+        top: 69px;
+        right: 0px;
+
+    }
+    .author_img_wrapper img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .link_button_wrapper{
+        margin-top: 30px;
+    }
+}
+@media (max-height: 500px) and (orientation:landscape) {
+    .author_wrapper{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        white-space: pre-line;
+
+    }
+
+
+    .text_wrapper{
+        position: absolute;
+        top: 40%;
+        left: 5%;
+        z-index: 20;
+        width: 85%;
+
+    }
+
+    .author_header{
+        width: 100%;
+        font-family: Bebas Neue;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 2.3vmax;
+        line-height: 2.3vmax;
+        color: #FFFFFF;
+        white-space: normal;
+
+    }
+    .author_content{
+        width: 100%;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.6vmax;
+        line-height: 1.9vmax;
+        color: #FFFFFF;
+        margin-top: 10px;
+
+    }
+
+    .author_img_wrapper{
+        position: absolute;
+        width: 48.61111%;
+        height: 100%;
+        right: 0px;
+        top: 0px;
+        left: initial;
+
+    }
+    .author_img_wrapper img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .link_button_wrapper{
+        margin-top: 10px;
+    }
+
+}

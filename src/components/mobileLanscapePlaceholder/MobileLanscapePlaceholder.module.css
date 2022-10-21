@@ -1,0 +1,37 @@
+.wrapper{
+    
+    display: grid;
+    flex-flow: column nowrap;
+    grid-template-rows: 95px min-content 1fr min-content 1fr 62px;
+    background:url('./pic-1.png') no-repeat left bottom,url('./pic.png') no-repeat right top ;
+    height: 100%
+
+}
+
+
+.text{
+    text-align: center;
+    font-family: Bebas Neue;
+    font-weight: bold;
+    font-size: 6.67vh;
+    /* padding-top: 95px; */
+    grid-row: 2;
+    line-height: normal;
+    /* identical to box height, or 72% */
+
+    place-self: start center;
+
+
+    color: #FFFFFF;
+
+}
+.phone{
+
+    grid-row: 4;
+    object-fit: contain;
+    place-self: center;
+    /* padding-top: 27px; */
+    /* width: 328px */
+    height: min(166px,44.27vh)
+
+}

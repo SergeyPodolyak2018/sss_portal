@@ -1,0 +1,336 @@
+.wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /*overflow: auto;*/
+    display: flex;
+    flex-direction: column;
+    transition: background-color 2s;
+    margin-bottom: 20px;
+}
+.content_wrapper{
+    margin-top: 2.78vw;
+    display: flex;
+}
+.text_wrapper{
+    width: 44.45vw;
+    margin-left: 4.17vw;
+    margin-right: 2.78vw;
+}
+.header_wrapper{
+    background-color: #2E3237;
+    z-index: 10;
+    width: 100%;
+    height: 15.97vw;
+    border-bottom: 0.14vw solid #FFFFFF;
+
+}
+
+.header{
+    width: 31.88vw;
+    height: 6.25vw;
+    white-space: nowrap;
+    font-family: Bebas Neue;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 6.25vw;
+    line-height: 6.25vw;
+    color: #FFFFFF;
+
+
+    margin-left: 4.17vw;
+    margin-bottom: auto;
+    margin-top: 6.94vw;
+
+}
+
+.body{
+    width: auto;
+    height: auto;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 27px;
+    /* or 123% */
+
+
+    color: #FFFFFF;
+    margin-top: 0.69vw;
+}
+.form_wrapper{
+
+    width: 32.64vw;
+
+}
+.img_wrapper{
+    width: 100%;
+    height: calc(100% - 6.04vw);
+    margin-top: 6.04vw;
+    background-repeat: no-repeat, repeat;
+    background-position: bottom;
+    background-size:cover;
+}
+.img_wrapper img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+}
+.formSended_wrapper{
+    position: absolute;
+    top:9.72vw;
+    left: 4.17vw;
+}
+.formSended{
+    width: 60.35vw;
+    height: 6.25vw;
+
+    font-family: Bebas Neue;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 6.25vw;
+    line-height: 6.25vw;
+    /* identical to box height, or 100% */
+
+
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+@media (max-width: 1264px) and (orientation:landscape) {
+
+}
+
+@media (max-width: 768px) {
+    .wrapper{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        /*overflow: auto;*/
+        display: flex;
+        flex-direction: column;
+    }
+    .header_wrapper{
+
+         width: 100%;
+         height: 135px;
+         border-bottom: 2px solid #FFFFFF;
+
+     }
+
+    .header{
+        width: 332px;
+        height: 65px;
+
+        font-family: Bebas Neue;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 65px;
+        line-height: 65px;
+        color: #FFFFFF;
+
+
+        margin-left: 16px;
+        margin-bottom: auto;
+        margin-top: 50px;
+
+    }
+    .content_wrapper{
+        width: 100%;
+        margin-top: 31px;
+        display: flex;
+        flex-direction: column;
+    }
+    .text_wrapper{
+        width: auto;
+        max-width: 469px;
+        margin-left: 16px;
+        margin-bottom: 60px;
+    }
+
+    .body{
+        width: auto;
+
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 30px;
+        /* or 136% */
+
+
+        color: #FFFFFF;
+
+    }
+    .form_wrapper{
+
+        margin-left: 16px;
+        width: 469px;
+
+    }
+    .img_wrapper{
+        width: 100%;
+        height: calc(100% - 6.04vw);
+        margin-top: 0px;
+    }
+    .img_wrapper img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+
+    }
+    .formSended_wrapper{
+        position: absolute;
+        left: 70px;
+        top: 130px;
+    }
+    .formSended{
+        width: 628px;
+        height: 65px;
+
+        font-family: Bebas Neue;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 65px;
+        line-height: 65px;
+        /* identical to box height, or 100% */
+
+        text-align: center;
+
+        color: #FFFFFF;
+        white-space: nowrap;
+    }
+}
+@media (max-width: 500px) and (orientation:portrait) {
+    .wrapper{
+        width: 100%;
+        height: auto;
+        position: relative;
+        /*overflow: auto;*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header_wrapper{
+
+        width: 100%;
+        height: 90px;
+        border-bottom: 2px solid #FFFFFF;
+
+    }
+
+    .header{
+        width: auto;
+        height: 30px;
+
+        font-family: Bebas Neue;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 30px;
+        /* identical to box height, or 100% */
+        color: #FFFFFF;
+
+
+        margin-left: 16px;
+        margin-bottom: auto;
+        margin-top: 40px;
+
+    }
+    .content_wrapper{
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text_wrapper{
+        width: auto;
+        margin-left: 16px;
+        margin-bottom: 40px;
+    }
+
+    .body{
+        width: auto;
+
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        /* or 136% */
+
+
+        color: #FFFFFF;
+
+    }
+    .form_wrapper{
+
+        margin-left: 16px;
+        width: 85.33333333%;
+margin-right: auto;
+    }
+    .img_wrapper{
+        width: 100%;
+        height: calc(100% - 6.04vw);
+        margin-top: 147px;
+    }
+    .img_wrapper img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+
+    }
+    .formSended_wrapper{
+        position: absolute;
+        left: 16px;
+        top: 130px;
+    }
+    .formSended{
+        width: 343px;
+        height: 30px;
+
+        font-family: Bebas Neue;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 30px;
+        /* identical to box height, or 100% */
+
+        text-align: center;
+
+        color: #FFFFFF;
+        white-space: nowrap;
+    }
+}
+
+@media (max-height: 668px){
+    .wrapper{
+        height: auto;
+    }
+}
+@media (max-height: 500px) and (orientation:landscape) {
+    .wrapper{
+        width: 100%;
+        height: auto;
+        position: relative;
+        /*overflow: auto;*/
+        display: flex;
+        flex-direction: column;
+        transition: background-color 2s;
+    }
+    .content_wrapper{
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .form_wrapper{
+
+        margin-left: 16px;
+        width: 320px;
+
+    }
+}
+

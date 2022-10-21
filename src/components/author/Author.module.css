@@ -1,0 +1,250 @@
+.author_wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    white-space: pre-line;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.text_wrapper{
+    position: absolute;
+    top:22.78vh;
+    left: 15.9vw;
+    z-index: 20;
+    width: 54.86%;
+
+}
+
+.author_header{
+    width: 100%;
+    font-family: Bebas Neue;
+    font-style: normal;
+    font-weight: bold;
+    font-size: min(60px,4.166vw);
+    line-height: min(70px, 4.8611vw);
+    /* or 106% */
+    color: #FFFFFF;
+
+}
+.author_content{
+    width: 327px;
+    height: 30px;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.67vw;
+    line-height: 2.08vw;
+    /* font-size: 2.66666666vmin;
+    line-height: 3.33333333vmin; */
+    /*font-size: 24px;
+    line-height: 30px;*/
+    color: #FFFFFF;
+    margin-left: 171px;
+    margin-top: 20px;
+    white-space: nowrap;
+
+}
+
+.author_img_wrapper{
+    position: absolute;
+    width: 48.61111%;
+    height: 100%;
+    right: 0px;
+    top: 0px;
+
+}
+.author_img_wrapper img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.link_button_wrapper{
+
+}
+
+
+@media (max-width: 768px) {
+    .author_wrapper{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        white-space: normal;
+
+    }
+
+
+    .text_wrapper{
+
+        width: 87.67302%;
+        left: 16px;
+        top: 48.1445%;
+
+    }
+
+    .author_header{
+        width: 100%;
+        font-family: Bebas Neue;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 4.8828vmax;
+        line-height: 5.8593vmax;
+        /*font-size: 65px;
+        line-height: 65px;*/
+
+
+    }
+    .author_content{
+        width: 327px;
+        height: 30px;
+        font-size: 24px;
+        line-height: 30px;
+        margin-left: 273px;
+        margin-top: 30px;
+
+    }
+
+    .author_img_wrapper{
+        position: absolute;
+        width: 100%;
+        height: 39.3554%;
+        right: 0px;
+        top: 135px;
+
+    }
+    .author_img_wrapper img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .link_button_wrapper{
+
+    }
+}
+@media (max-height: 900px){
+    .author_header{
+        font-size: 6.666vmin;
+        line-height: 7.777vh;
+    }
+}
+@media (max-width: 500px) and (orientation:portrait) {
+    .author_wrapper{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        white-space: normal;
+
+    }
+
+
+    .text_wrapper{
+
+        width: 87.47vw;
+        left: 16px;
+        top:min(202px, calc(202px * var(--inhm)));
+
+    }
+
+    .author_header{
+        width: 100%;
+        font-family: Bebas Neue;
+        font-style: normal;
+        font-weight: bold;
+        font-size: min(35px,calc(50px * var(--inhm)));
+        line-height: min(40px,calc(50px * var(--inhm)));
+
+
+    }
+    .author_content{
+        width: 275px;
+        height: 22px;
+        font-size: 19px;
+        line-height: 22px;
+        margin-left: 0px;
+        margin-top: 10px;
+
+    }
+
+    .author_img_wrapper{
+        position: absolute;
+        width: 100%;
+        height: 185px;
+        right: 0px;
+        top: 69px;
+
+
+    }
+    .author_img_wrapper img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .link_button_wrapper{
+
+    }
+}
+
+@media (max-height: 500px) and (orientation:landscape) {
+    .author_wrapper{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        white-space: pre-line;
+
+    }
+
+
+    .text_wrapper{
+        position: absolute;
+        top: 37.777778%;
+        left: 5.902%;
+        z-index: 20;
+        width: 64%;
+
+    }
+
+    .author_header{
+        width: 100%;
+        font-family: Bebas Neue;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 4.25vmax;
+        line-height: 4.597vmax;
+        color: #FFFFFF;
+
+    }
+    .author_content{
+        width: 327px;
+        height: 30px;
+
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2.66666666vmin;
+        line-height: 3.33333333vmin;
+        /*font-size: 24px;
+        line-height: 30px;*/
+        color: #FFFFFF;
+        margin-left: 171px;
+        margin-top: 20px;
+        white-space: nowrap;
+
+    }
+
+    .author_img_wrapper{
+        position: absolute;
+        width: 48.61111%;
+        height: 100%;
+        right: 0px;
+        top: 0px;
+
+    }
+    .author_img_wrapper img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -1,0 +1,90 @@
+
+export default [
+	{
+		type: 'date',
+		data: 'articlePostDate',
+		linkAllArticle: 'linkAllArticle',
+	},
+	{
+		type: 'title',
+		dataTitle: 'articleTitleContent',
+		dataSubTitle: 'articleSubTitleContent',
+	},
+	{
+		type: 'text',
+		text: 'articleTextContent',
+		marginBottom: '20px',
+	},
+	{
+		type: 'text',
+		text: 'articleTextContent',
+	},
+	{
+		type: 'bigImage',
+		alt: '',
+		img: {
+			desktop: '/img/article1/webp/Article1BigImage_desktop.webp',
+			tablet: '/img/article1/webp/Article1BigImage_ipad.webp',
+			mobile: '/img/article1/webp/Article1BigImage_iphone.webp',
+		},
+	},
+	{
+		type: 'text',
+		text: 'articleTextContent',
+	},
+	{
+		type: 'text',
+		text: 'articleTextContent',
+	},
+	{
+		type: 'titleCenter',
+		titleCenter: 'articleTitleCenter',
+	},
+	{
+		type: 'text',
+		text: 'articleTextContent',
+	},
+	{
+		type: 'normalImage',
+		img: {
+			desktop: '/img/article1/webp/Article1NormalImage_desktop.webp',
+			tablet: '/img/article1/webp/Article1NormalImage_ipad.webp',
+			mobile: '/img/article1/webp/Article1NormalImage_iphone.webp',
+		},
+		alt: '',
+		description: 'descriptionNormalImage',
+	},
+	{
+		type: 'text',
+		text: 'articleTextContent',
+	},
+	{
+		type: 'slider',
+		img: [
+			{
+				desktop: '/img/article1/webp/Article1NormalImage_desktop.webp',
+				tablet: '/img/article1/webp/Article1NormalImage_ipad.webp',
+				mobile: '/img/article1/webp/Article1NormalImage_iphone.webp',
+			},
+			{
+				desktop: '/img/article1/webp/Article1NormalImage_desktop.webp',
+				tablet: '/img/article1/webp/Article1NormalImage_ipad.webp',
+				mobile: '/img/article1/webp/Article1NormalImage_iphone.webp',
+			},
+			{
+				desktop: '/img/article1/webp/Article1NormalImage_desktop.webp',
+				tablet: '/img/article1/webp/Article1NormalImage_ipad.webp',
+				mobile: '/img/article1/webp/Article1NormalImage_iphone.webp',
+			},
+			{
+				desktop: '/img/article1/webp/Article1NormalImage_desktop.webp',
+				tablet: '/img/article1/webp/Article1NormalImage_ipad.webp',
+				mobile: '/img/article1/webp/Article1NormalImage_iphone.webp',
+			},
+		],
+	},
+	{
+		type: 'text',
+		text: 'articleTextContent',
+	},
+]

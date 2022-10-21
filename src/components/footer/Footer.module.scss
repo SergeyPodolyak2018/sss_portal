@@ -1,0 +1,221 @@
+.container {
+    display: grid;
+    background: #2E3237;
+    padding: 21px 18px 29px 15px;
+    color: #FFFFFF;
+    grid-template-areas:
+        "logo tabletNav tabletNav dialog"
+        "copyrights FooterNav FooterNav FooterNav ";
+    grid-template-columns: auto auto auto auto;
+    border-top: 1px solid #ffffff;
+}
+.logo {
+    margin-top: 9px;
+    color: #FFFFFF;
+    grid-area: logo;
+}
+
+.logo {
+
+    &:active,
+    &:hover {
+        filter: invert(46%) sepia(74%) saturate(499%) hue-rotate(1deg) brightness(102%) contrast(91%);
+    }
+}
+
+.dialogStart {
+
+    &:active,
+    &:hover {
+        color: #C08718;
+
+        span::after {
+            filter: invert(46%) sepia(74%) saturate(499%) hue-rotate(1deg) brightness(102%) contrast(91%);
+        }
+    }
+}
+
+.dialogStart {
+    white-space: pre-line;
+    padding-top: 0px;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 21px;
+
+    span {
+        font-family: Open Sans;
+
+        font-size: 15px;
+        line-height: 22px;
+        text-transform: uppercase;
+        display: flex;
+        margin-top: -1px;
+    }
+
+    grid-area: dialog;
+    height: 48px;
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row nowrap;
+    justify-self: end;
+    :after {
+        content: '';
+        background: url('./Rectangle\ 67.svg');
+        width: 12px;
+        height: 11px;
+        display: block;
+        margin-top: 7px;
+        margin-left: 9px;
+    }
+}
+
+.copyrights {
+    grid-area: copyrights;
+    font-family: Open Sans;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+    place-self: end start;
+    display: flow-root;
+}
+
+
+.footerNav {
+    grid-area: FooterNav;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    grid-column: 2 / span 3;
+    margin-top: 3px;
+
+    li {
+        list-style-type: none;
+        width: 70px;
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        a {
+            // height: 28px;
+            text-decoration: none;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            /* or 117% */
+
+
+            color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    padding: 0;
+    margin: 0;
+    padding-left: 17px;
+
+}
+
+
+
+@media (min-width: 555px) {
+
+    .container {
+        height: auto;
+        padding: 14px 17px 41px 18px;
+        grid-template-columns: 1fr 1fr auto;
+    }
+    .logo {
+        line-height: 0;
+        font-size: 0;
+        margin-bottom: 23px;
+    }
+
+    .copyrights {
+
+        font-size: 16px;
+        line-height: 28px;
+        display: flex;
+        align-items: center;
+    }
+
+    .footerNav {
+        padding: 0;
+        grid-area: tabletNav;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        flex-direction: column;
+        height: auto;
+        min-width: 195px;
+        align-items: stretch;
+        justify-content: space-between;
+
+        li {
+            a {
+
+                font-size: 16px;
+                line-height: 28px;
+            }
+
+            width: auto;
+        }
+    }
+
+    .dialogStart {
+        padding-top: 5px;
+        padding-right: 5px;
+
+        span {
+
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+}
+@media (min-width: 642px) {
+    .container {
+        grid-template-columns: 257px 1fr auto;
+    }
+}
+
+@media (min-width: 769px) {
+
+    .container {
+        height: auto;
+        padding: 24px 88px 25px 62px;
+        grid-template-columns: 52.9% auto auto;
+    }
+
+    .logo {
+        line-height: 0;
+        font-size: 0;
+        margin-top: 0;
+        margin-bottom: 36px;
+    }
+
+    .footerNav{
+        min-width: 206px;
+        margin-right: 51px;
+    }
+
+    .copyrights,
+    .footerNav li a {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .dialogStart{
+        padding: 0;
+    }
+
+    .dialogStart span {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
